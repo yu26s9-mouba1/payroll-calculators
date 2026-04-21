@@ -1,14 +1,31 @@
 package com.pluralsight;
 
 import java.io.*;
-import java.util.Scanner;
+
 
 
 public class payRollCalculators {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        
+
+        //Ceating a buffer to to read the file
+
+        try {
+         FileReader fw = new FileReader("emplyee.csv");
+     }
+        String input;
+
+        while ((input = reader.readLine()) != null){
+
+
+
+
+
+
+
+
 
 
 
     }
-}
+

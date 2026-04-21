@@ -5,8 +5,10 @@ public class Employee {
     //Employees properties
     private int employeeId;
     private String name;
-    private int hoursWorked;
+    private double hoursWorked;
     private double payRate;
+
+
 
 
     //Constructors
@@ -18,7 +20,7 @@ public class Employee {
     }
 
 
-    //Getters and setters 
+    //Getters and setters
 
     public int getEmployeeId() {
         return employeeId;
@@ -36,11 +38,11 @@ public class Employee {
         this.name = name;
     }
 
-    public int getHoursWorked() {
+    public double getHoursWorked() {
         return hoursWorked;
     }
 
-    public void setHoursWorked(int hoursWorked) {
+    public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
 
@@ -51,6 +53,21 @@ public class Employee {
     public void setPayRate(double payRate) {
         this.payRate = payRate;
     }
+
+
+    //Calcluating employees grosspay
+    public double getGrossPay(){
+        if(this.hoursWorked > 40){
+            double baseHoursPay = 40 * payRate;
+            double overtimeHourlyPay = (hoursWorked - 40) * ( payRate * 1.5);
+            return baseHoursPay + overtimeHourlyPay;
+        }else{
+            return this.hoursWorked * this.payRate;
+        }
+
+    }
+
+
 }
 
 
