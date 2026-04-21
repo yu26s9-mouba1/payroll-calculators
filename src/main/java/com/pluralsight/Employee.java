@@ -12,7 +12,7 @@ public class Employee {
 
 
     //Constructors
-    public Employee(int employeeId, String name, int hoursWorked, double payRate) {
+    public Employee(int employeeId, String name, double hoursWorked, double payRate) {
         this.employeeId = employeeId;
         this.name = name;
         this.hoursWorked = hoursWorked;
